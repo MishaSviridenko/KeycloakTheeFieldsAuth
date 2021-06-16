@@ -13,28 +13,31 @@
 	</properties>
 
     <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>3.8.1</version>
-            <scope>test</scope>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>junit</groupId>-->
+<!--            <artifactId>junit</artifactId>-->
+<!--            <version>3.8.1</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>org.keycloak</groupId>
             <artifactId>keycloak-core</artifactId>
-            <version>4.8.3.Final</version>
+            <version>12.0.4</version>
+<!--            <version>4.8.3.Final</version>-->
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.keycloak</groupId>
             <artifactId>keycloak-server-spi</artifactId>
-            <version>4.8.3.Final</version>
+            <version>12.0.4</version>
+<!--            <version>4.8.3.Final</version>-->
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.keycloak</groupId>
             <artifactId>keycloak-server-spi-private</artifactId>
-            <version>4.8.3.Final</version>
+            <version>12.0.4</version>
+<!--            <version>4.8.3.Final</version>-->
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -46,7 +49,8 @@
         <dependency>
             <groupId>org.keycloak</groupId>
             <artifactId>keycloak-services</artifactId>
-            <version>4.8.3.Final</version>
+            <version>12.0.4</version>
+<!--            <version>4.8.3.Final</version>-->
             <scope>provided</scope>
         </dependency>
     </dependencies>
@@ -54,12 +58,20 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.5.1</version>
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-compiler-plugin</artifactId>-->
+<!--                <version>3.8.1</version>-->
+<!--                <version>3.5.1</version>-->
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-maven-plugin</artifactId>
+                <version>2.1.0.Beta1</version>
+<!--                <groupId>org.wildfly.plugins</groupId>-->
+<!--                <artifactId>wildfly-maven-plugin</artifactId>-->
+<!--                <version>2.0.1.Final</version>-->
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+<!--                    <source>1.8</source>-->
+<!--                    <target>1.8</target>-->
+                    <skip>false</skip>
                 </configuration>
             </plugin>
         </plugins>

@@ -9,7 +9,7 @@ import javax.ws.rs.core.MultivaluedMap;
 public class UsernameCompanyPasswordForm extends UsernamePasswordForm implements Authenticator {
 
     @Override
-    protected boolean validateForm(AuthenticationFlowContext context, MultivaluedMap<String, String> formData) {
+    public boolean validateForm(AuthenticationFlowContext context, MultivaluedMap<String, String> formData) {
         return validateUserAndPassword(context, formData) && validateCompanyLogin(context, formData);
     }
 
